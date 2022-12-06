@@ -2,19 +2,20 @@ import React, { useState, useRef, useEffect } from 'react';
 import TodoList from './TodoList'
 import uuidv4 from 'uuid/v4'
 
-const LOCAL_STORAGE_KEY = 'todoApp.todos'
+const STORAGE_KEY = 'todos'
 
 function App() {
+  // The useState lets us react to data changes in the UI
   const [todos, setTodos] = useState([])
   const todoNameRef = useRef()
 
   useEffect(() => {
-    const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+    const storedTodos = JSON.parse(localStorage.getItem(STORAGE_KEY))
     if (storedTodos) setTodos(storedTodos)
   }, [])
 
   useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))
   }, [todos])
 
   function toggleTodo(id) {
