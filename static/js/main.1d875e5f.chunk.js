@@ -1,2 +1,0 @@
-(this.webpackJsonplab10=this.webpackJsonplab10||[]).push([[0],{3:function(e,n,t){e.exports=t(8)},8:function(e,n,t){"use strict";t.r(n);var a=t(0),r=t.n(a),l=t(2);var c=function(){return r.a.createElement(r.a.Fragment,null,r.a.createElement("div",null," React Framework"))};t.n(l).a.render(r.a.createElement(c,null),document.getElementById("root"))}},[[3,1,2]]]);
-//# sourceMappingURL=main.1d875e5f.chunk.js.map
